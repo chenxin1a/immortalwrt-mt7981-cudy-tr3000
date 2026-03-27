@@ -132,8 +132,8 @@ jobs:
     name: 🔨 Build Firmware
     needs: menuconfig
     if: always() && (needs.menuconfig.result == 'success' || needs.menuconfig.result == 'skipped')
-    runs-on: ubuntu-22.04
-    
+#    runs-on: ubuntu-22.04
+    runs-on: self-hosted    
     steps:
       - name: 🙌 Checkout
         uses: actions/checkout@v4
